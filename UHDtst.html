@@ -369,8 +369,8 @@ display: none;
 
 
 <p>This package provides tools for ultra-high dimensional population
-covariance testing. It contains SY2010, LC2012, CLX2013, HC2018 and
-DHW2023.</p>
+covariance testing. It contains SY2010, LC2012, CLX2013, HC2018 and a
+new proposed test by Ding, Hu and Wang.</p>
 <pre class="r"><code>library(UHDtst)</code></pre>
 <p>Here we use one simple example to see how those functions work. We
 here generate Gaussian i.i.d samples <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, with sample size 100 and 100 and
@@ -384,22 +384,22 @@ Y = matrix(rnorm(n2*p), ncol=p)</code></pre>
 straightforward</p>
 <pre class="r"><code>SY2010(X, Y)</code></pre>
 <pre><code>## $Q2
-## [1] 2.001869
+## [1] 0.03296582
 ## 
 ## $pvalue
-## [1] 0.1571053</code></pre>
+## [1] 0.8559242</code></pre>
 <pre class="r"><code>LC2012(X, Y)</code></pre>
 <pre><code>## $statistic
-## [1] 0.3679173
+## [1] 0.7282392
 ## 
 ## $pvalue
-## [1] 0.3564674</code></pre>
+## [1] 0.2332336</code></pre>
 <pre class="r"><code>CLX2013(X, Y)</code></pre>
 <pre><code>## $TSvalue
-## [1] 0.8529527
+## [1] 2.120086
 ## 
 ## $pvalue
-## [1] 0.1220941</code></pre>
+## [1] 0.06677129</code></pre>
 <p>The return will contain statistics and their corresponding p-values.
 If we set significance level as 0.05, we should accept them all.</p>
 <p>For HC2018, since it is a multiple testing, we need to assert the
@@ -410,13 +410,13 @@ numbers of super-diagonals. And the default is <span class="math inline">\(\lflo
 ## [1] 0
 ## 
 ## $pvalues
-##  [1] 0.47111052 0.03961670 0.65939580 0.87431071 0.20004897 0.72556443
-##  [7] 0.88769050 0.10052539 0.59119791 0.54113877 0.09434952 0.87268368
-## [13] 0.11771541 0.18659025 0.59831154 0.01342304 0.66605944 0.35394979
-## [19] 0.35651846 0.74102769 0.32760670 0.95271909 0.55063020 0.60277013
-## [25] 0.60358123 0.65962863 0.44925870 0.87811405 0.95902370 0.52480053
-## [31] 0.91726127 0.45953962 0.16626275 0.07825628 0.25570815 0.77240365
-## [37] 0.36749859 0.36622820 0.79374481 0.65385920 0.11568362
+##  [1] 0.01258424 0.81108555 0.32788619 0.39929033 0.04521339 0.38235345
+##  [7] 0.14337943 0.76582997 0.57831070 0.39019748 0.84341088 0.98453290
+## [13] 0.80384539 0.72632591 0.21964800 0.45255329 0.79649849 0.12153013
+## [19] 0.66461830 0.16648744 0.38069693 0.17555943 0.94075624 0.35581851
+## [25] 0.61388496 0.28958792 0.75689870 0.37551798 0.15565095 0.22573675
+## [31] 0.04623414 0.64256622 0.23495541 0.49062623 0.88271767 0.54555658
+## [37] 0.74713805 0.39005512 0.95264554 0.53042765 0.61839862
 ## 
 ## $N
 ## [1] 40</code></pre>
@@ -435,7 +435,7 @@ test and 0.05 is the default. The syntax is as follows.</p>
 ## [1] 100
 ## 
 ## $reject
-## [1] 6</code></pre>
+## [1] 5</code></pre>
 <p>If you know the tuning parameter, we can use this syntax.</p>
 <pre class="r"><code>TwoSampleTest(X, Y, const=0.5)</code></pre>
 <pre><code>## $decision
@@ -445,7 +445,7 @@ test and 0.05 is the default. The syntax is as follows.</p>
 ## [1] 100
 ## 
 ## $reject
-## [1] 2</code></pre>
+## [1] 3</code></pre>
 <p>For the output <span class="math inline">\(\mathrm{decision}=1\)</span> means we should
 reject the null. <span class="math inline">\(\mathrm{df}\)</span> is the
 number of efficient splittings in our algorithm and <span class="math inline">\(\mathrm{reject}\)</span> is the total number of
@@ -456,8 +456,8 @@ since it uses bootstrapping.</p>
 <p>[1] Srivastava, M. S., &amp; Yanagihara, H. (2010). Testing the
 equality of several covariance matrices with fewer observations than the
 dimension. Journal of Multivariate Analysis, 101(6), 1319-1329.</p>
-<p>[2] Li, J., &amp; Chen, S. X. (2012). TWO SAMPLE TESTS FOR
-HIGH-DIMENSIONAL COVARIANCE MATRICES. The Annals of Statistics, 40(2),
+<p>[2] Li, J., &amp; Chen, S. X. (2012). Two sample tests for
+high-dimensional covariance matrices. The Annals of Statistics, 40(2),
 908–940.</p>
 <p>[3] Cai, T., Liu, W., &amp; Xia, Y. (2013). Two-sample covariance
 matrix testing and support recovery in high-dimensional and sparse
@@ -467,7 +467,8 @@ settings. Journal of the American Statistical Association, 108(501),
 covariance matrix testing via super-diagonals. Statistica Sinica, 28(4),
 2671-2696.</p>
 <p>[5] Ding, X. C. &amp; Hu, Y. C., &amp; Wang, Z. G. (2023). Two sample
-test for covariance matrices in ultra-high dimension. In progress.</p>
+test for covariance matrices in ultra-high dimension. Avaviable on
+arXiv.</p>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
