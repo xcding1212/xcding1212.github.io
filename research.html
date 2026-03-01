@@ -3,16 +3,162 @@
 
 <html lang="en">
 <head>
-  <title>Xiucai Ding</title>
+  <title>Research | Xiucai Ding</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research papers by Xiucai Ding in high-dimensional statistics, random matrix theory, machine learning, and time series analysis.">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <style> 		li{
-    margin: 10px 0;
-}	</style>	
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700|Lora:400,700" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #1f2933;
+      background: #f5f7fb;
+    }
+
+    a {
+      color: #0b5ea8;
+    }
+
+    a:hover {
+      color: #083b69;
+      text-decoration: none;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #0b1f3a;
+      border: none;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: #f3f7fb;
+      font-size: 16px;
+    }
+
+    .navbar-inverse .navbar-nav > li.active > a,
+    .navbar-inverse .navbar-nav > li.active > a:focus,
+    .navbar-inverse .navbar-nav > li.active > a:hover {
+      background-color: #13345d;
+      color: #ffffff;
+    }
+
+    .page-shell {
+      padding: 44px 0 56px;
+    }
+
+    .page-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      padding: 34px 38px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Oswald', sans-serif;
+      color: #0b1f3a;
+    }
+
+    .page-intro {
+      margin-bottom: 20px;
+      color: #4a5b6c;
+      margin-top: 0;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+
+    .section-note {
+      margin-bottom: 24px;
+      color: #4a5b6c;
+    }
+
+    ol.publication-list {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      counter-reset: publication-counter 33;
+    }
+
+    ol.publication-list li {
+      position: relative;
+      margin: 0 0 12px;
+      padding: 0 0 12px 46px;
+      border-bottom: 1px solid #e3eaf2;
+      counter-increment: publication-counter -1;
+    }
+
+    ol.publication-list li::before {
+      content: counter(publication-counter);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #e7eef8;
+      color: #27486b;
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    ol.publication-list li:last-child {
+      border-bottom: none;
+    }
+
+    .btn-danger {
+      background-color: #8b1e3f;
+      border-color: #8b1e3f;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+    }
+
+    .section-note u {
+      text-decoration: none;
+      border-bottom: 1px solid #8094ac;
+    }
+
+    .btn-danger:hover,
+    .btn-danger:focus {
+      background-color: #6d1631;
+      border-color: #6d1631;
+    }
+
+    @media (max-width: 991px) {
+      .page-shell {
+        padding: 24px 0 36px;
+      }
+
+      .page-card {
+        padding: 24px;
+      }
+
+      ol.publication-list {
+        counter-reset: publication-counter 33;
+      }
+
+      ol.publication-list li {
+        padding: 0 0 12px 42px;
+      }
+
+      ol.publication-list li::before {
+        left: 0;
+        top: 2px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -22,7 +168,7 @@
       <div class="container">
 		<ul class="nav navbar-nav">
               <li><a href="index.html"><b>Home</b></a></li>
-              <li><a href="research.html"><b>Research</b></a></li> 
+              <li class="active"><a href="research.html"><b>Research</b></a></li> 
               <li><a href="teaching.html"><b>Teaching</b></a></li> 
 	      <li><a href="software.html"><b>Software</b></a></li>	
 		</ul>
@@ -31,26 +177,20 @@
 	
 
   
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-9" style="height: 205vh;">
-			
-		
-                
-                <div style="margin-top:3%; margin-bottom:3%; text-align:justify;">    
-			     <p> &nbsp </p>
-	        <p><div> <b><font size="+1"> Research papers </font> (<u>#</u>: students under my supervision) </b><br></p>  			
-			                <ol reversed>
+  <div class="container page-shell">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-card">
+          <p class="page-intro">Publications and preprints in high-dimensional statistics, random matrix theory, machine learning, deep learning, manifold learning, time series analysis, and fast scalable computation for massive datasets, with applications to single-cell RNA sequencing, EEG/ECG/EMG and respiratory signal analysis, neuroimaging, and brain-computer interfaces.</p>
+          <h2 class="section-title">Research Papers</h2>
+          <p class="section-note"><u>#</u> denotes students under my supervision.</p>
+          <ol reversed class="publication-list">
 		  <li> <b>X. Ding</b>, C. Shen, and H.-T. Wu. <a href="https://arxiv.org/abs/2602.10530"> Generalized Robust Adaptive-Bandwidth Multi-View Manifold Learning in High Dimensions with Noise </a>, arXiv: 2602.10530.   </li>								
 		 <li> <b>X. Ding</b> and <u> Y. Hu<sup>#</sup></u> </u>. <a href="https://arxiv.org/abs/2509.07372"> On the edge eigenvalues of sparse random geometric graphs </a>, arXiv: 2509.07372.   </li>						
 	     <li><u> C. Qian<sup>#</sup></u>, <b>X. Ding</b>, and L. Li. <a href="https://arxiv.org/abs/2507.04237">Structural Classification of Locally Stationary Time Series Based on Second-order Characteristics</a>, arXiv: 2507.04237.  </li>					
-	    <li> <b>X. Ding</b> and Z. Zhou. <a href="https://www.arxiv.org/abs/2506.23069"> Simultaneous Sieve Estimation and Inference for Time-Varying Nonlinear Time Series Regression </a> arXiv: 2506.23069. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/SIMle",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a> </li>	 					
+	    <li> <b>X. Ding</b> and Z. Zhou. <a href="https://www.arxiv.org/abs/2506.23069"> Simultaneous Sieve Estimation and Inference for Time-Varying Nonlinear Time Series Regression </a>, arXiv: 2506.23069. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/SIMle",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a> </li>	 					
 	   <li> <b>X. Ding </b>, <u>J. Xie<sup>#</sup></u>, L. Yu and W. Zhou. <a href="m1.pdf"> Multiplier bootstrap meets high-dimensional PCA: the good, the bad and the modification</a> </li>						
-	    <li> C. Abi Younes, <b>X. Ding</b>, and T. Trogdon. (alphabetical order). <a href="https://arxiv.org/abs/2504.03066">A Lanczos-Based Algorithmic Approach for Spike Detection in Large Sample Covariance Matrices</a>, arXiv: 2504.03066.
+	    <li> C. Abi Younes, <b>X. Ding</b>, and T. Trogdon. (alphabetical order). <a href="https://arxiv.org/abs/2504.03066">A Lanczos-Based Algorithmic Approach for Spike Detection in Large Sample Covariance Matrices</a>, arXiv: 2504.03066.</li>
 	   <li> <b>X. Ding</b>, Y. Li and F. Yang. <a href="https://arxiv.org/abs/2404.14751"> Eigenvector distributions and optimal shrinkage estimators for large covariance and precision matrices</a>, arXiv: 2404.14751. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/RMT4DS",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a> </li>																																		 					   	
 	  <li> <b>X. Ding</b>, <u> Y. Hu<sup>#</sup></u> and <u> Z. Wang<sup>#</sup></u>. <a href="https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2423971"> Two sample test for covariance matrices in ultra-high dimension </a>, <b> Journal of the American Statistical Association </b>, 120 (552): 2210–222,2025.   &nbsp; &nbsp;  <a href="https://github.com/xcding1212/UHDtst",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a> </li>		
  	   <li> <b>X. Ding </b> and R. Ma. <a href="https://www.tandfonline.com/doi/full/10.1080/01621459.2025.2539539"> Kernel spectral joint embeddings for high-dimensional noisy datasets using duo-landmark integral operators </a>,  <b> Journal of the American Statistical Association  </b>, 120(551): 1463- 1476, 2025.   &nbsp; &nbsp;  <a href="https://github.com/rongstat/KSJE",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:65px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Code </font> </button>  </a> </li>
@@ -58,7 +198,7 @@
 	  <li> <b>X. Ding </b> and <u>J. Xie<sup>#</sup></u>. <a href="https://arxiv.org/abs/2304.07893"> Tracy-Widom distribution for the edge eigenvalues of elliptical model </a>, <b> Information and Inference: A Journal of the IMA </b>, 14(2):iaaf004, 2025. </li>
 	   <li> <b>X. Ding</b> and Z. Zhou. <a href="https://academic.oup.com/biomet/article/112/2/asaf016/8046656"> On the partial autocorrelation function for locally stationary time series: characterization, estimation and inference </a>,  <b> Biometrika </b>, 112(2):asaf016, 2025. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/Sie2nts",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a> </li>
 	   <li> <b>X. Ding</b> and H.-T. Wu. <a href="https://academic.oup.com/imaiai/article/13/1/iaad051/7514683"> How do kernel-based sensor fusion algorithms behave under high dimensional noise? </a>,  <b> Information and Inference: A Journal of the IMA </b>, 13(1):iaad051, 2024. </li>							
-	  <li> <b>X. Ding</b> and T. Trogdon. <a href="https://academic.oup.com/imrn/article/2024/5/3975/7219278"> A Riemann--Hilbert approach to the perturbation theory for orthogonal polynomials: Applications to numerical linear algebra and random matrix theory </a>,  <b> International Mathematics Research Notices </b>, 2024(5):3975–-4061,2024. </li>	 
+	  <li> <b>X. Ding</b> and T. Trogdon. <a href="https://academic.oup.com/imrn/article/2024/5/3975/7219278"> A Riemann--Hilbert approach to the perturbation theory for orthogonal polynomials: Applications to numerical linear algebra and random matrix theory </a>,  <b> International Mathematics Research Notices </b>, 2024(5):3975-4061, 2024. </li>	 
 	  <li> <b>X. Ding</b> and R. Ma. <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-4/Learning-low-dimensional-nonlinear-structures-from-high-dimensional-noisy-data/10.1214/23-AOS2306.short"> Learning Low-Dimensional Nonlinear Structures from High-Dimensional Noisy Data: An Integral Operator Approach </a>, <b> The Annals of Statistics </b>, 51(4): 1744-1769, 2023. &nbsp; &nbsp;  <a href="https://github.com/rongstat/KEF",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:65px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Code </font> </button>  </a> </li>				
 	 <li> <b>X. Ding </b> and H. Ji. <a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-33/issue-4/Local-laws-for-multiplication-of-random-matrices/10.1214/22-AAP1882.short">Local laws for multiplication of random matrices </a>, <b> The Annals of Applied Probability</b>, 33(4): 2981--3009,2023. </li>						
 	 <li> <b>X. Ding </b> and H.-T. Wu. <a href="https://ieeexplore.ieee.org/document/9927456">Impact of signal-to-noise ratio and bandwidth on graph Laplacian spectrum from high-dimensional noisy point cloud</a>, <b> IEEE Transactions on Information Theory </b>, 69(3):1899-1931,2023. </li>					
@@ -69,41 +209,23 @@
 	  <li> Z. Bao, <b>X. Ding</b>, J. Wang, and K. Wang. (alphabetical order). <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-50/issue-2/Statistical-inference-for-principal-components-of-spiked-covariance-matrices/10.1214/21-AOS2143.short">Statistical inference for principal components of spiked covariance matrices</a>, <b>The Annals of Statistics</b>, 50(2):1144-1169, 2022. </li>	 					
           <li> <b>X. Ding </b> and T. Trogdon. <a href="https://www.ams.org/journals/qam/2022-80-01/S0033-569X-2021-01605-4/home.html">The conjugate gradient algorithm on a general class of spiked covariance matrices</a>, <b> Quarterly of Applied Mathematics </b>, 80(1):99-155, 2022. </li>					 
 	  <li> <b>X. Ding</b>, and F. Yang. <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-49/issue-2/Spiked-separable-covariance-matrices-and-principal-components/10.1214/20-AOS1995.short">Spiked separable covariance matrices and principal components</a>, <b>The Annals of Statistics</b>, 49(2): 1113-1138, 2021.</li>
-	  <li> <b>X. Ding</b>, D. Yu, Z. Zhang, and D. Kong. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/cjs.11604"> Multivariate functional responses low rank regression with an application to brain imaging data</a>, <b>The Canadian Journal of Statistics</b>, 49(1):150-181, 2021.</1i> 		 						
+	  <li> <b>X. Ding</b>, D. Yu, Z. Zhang, and D. Kong. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/cjs.11604"> Multivariate functional responses low rank regression with an application to brain imaging data</a>, <b>The Canadian Journal of Statistics</b>, 49(1):150-181, 2021.</li> 		 						
 	  <li> Z. Bao, <b>X. Ding</b>, and K. Wang. (alphabetical order). <a href="https://projecteuclid.org/euclid.aos/1611889231#abstract">Singular vector and singular subspace distribution for the matrix denoising model</a>, <b>The Annals of Statistics</b>, 49(1): 370-392,2021.</li>  
           <li> <b>X. Ding</b>. <a href="https://www.worldscientific.com/doi/abs/10.1142/S2010326321500143?journalCode=rmta">Spiked sample covariance matrices with possibly multiple bulk components</a>, <b>Random Matrices: Theory and Applications</b>, 10(1):2150014, 2021. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/RMT4DS",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a>  </li>
-	  <li> <b>X. Ding</b>, and H.-T. Wu. <a href="https://ieeexplore.ieee.org/document/9205615?source=authoralert"> On the spectral property of kernel-based sensor fusion algorithms of high dimensional data</a>, <b>IEEE Transactions on Information Theory</b>, 67(1):640 - 670, 2021. </1i> 
+	  <li> <b>X. Ding</b>, and H.-T. Wu. <a href="https://ieeexplore.ieee.org/document/9205615?source=authoralert"> On the spectral property of kernel-based sensor fusion algorithms of high dimensional data</a>, <b>IEEE Transactions on Information Theory</b>, 67(1):640 - 670, 2021. </li> 
 	  <li> <b>X. Ding</b>, and Z. Zhou. <a href="https://projecteuclid.org/euclid.aos/1597370680">Estimation and inference for precision matrices of nonstationary time series</a>, <b>The Annals of Statistics</b>, 48(4):2455-2477, 2020.</li>
 	  <li> <b>X. Ding</b>. <a href="https://projecteuclid.org/euclid.bj/1574758832">High dimensional deformed rectangular matrices with applications in matrix denoising</a>, <b>Bernoulli</b>, 26(1): 387-417, 2020. &nbsp; &nbsp;  <a href="https://github.com/xcding1212/RMT4DS",style="color:rgb(255,0,0);">  <button type="button" class="btn btn-danger" style="height:22px;width:75px; text-align: center;  vertical-align: middle;  padding-top: 0;"> <font size="2.5em">  Package </font> </button> </a></li>  
           <li> <b>X. Ding</b>. <a href="https://www.cambridge.org/core/journals/advances-in-applied-probability/article/singular-vector-distribution-of-sample-covariance-matrices/67B20ABE4FE8FCA3DE140DD9086F8918">Singular vector distribution of sample covariance matrices</a>, <b>Advances in Applied Probability</b>,51(1): 236-267, 2019.</li>	
 	  <li> <b>X. Ding</b>, and F. Yang. <a href="https://projecteuclid.org/euclid.aoap/1527840030">A necessary and sufficient condition for edge universality at the largest singular values of covariance matrices</a>, <b>The Annals of Applied Probability</b>, 28(3):1679-1738, 2018. </li>    
-		    </o1>		
-			</div>	
+		    </ol>
+        </div>
+      </div>
+    </div>
 			<!--	<div style="margin-bottom:10px; text-align:justify;"> <b><font size="+1"> Miscellaneous Publications </font></b> <br> 
 			                <ol>
 					<li> <b>X. Ding</b>, X. Chen, M. Zou and G. Zhang. <a href="http://itiis.org/digital-library/23597">ASSVD: Adaptive Sparse Singular Value Decomposition for High Dimensional Matrices</a>, <b>KSII Transactions on Internet and Information Systems</b>, 14(6): 2634-2648, 2020. </li>
 					</o1>	
 		</div>	-->
-		
-	
-		
-
-                </div>
-	
-            </div> 
-
-         
-            
-            
-            <!-- Links on the Sidebar -->
-            
-   
-
-            
-        </div>
-
-
-    </div>
     <!-- /.container -->
     
     <!-- Other people may like it too! -->

@@ -1,118 +1,219 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>Xiucai Ding</title>
+  <title>Software | Xiucai Ding</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software packages by Xiucai Ding for random matrix theory, non-stationary time series, and high-dimensional statistics.">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-<style> 		li{
-    margin: 10px 0;
-}	</style>	
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700|Lora:400,700" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #1f2933;
+      background: #f5f7fb;
+    }
+
+    a {
+      color: #0b5ea8;
+    }
+
+    a:hover {
+      color: #083b69;
+      text-decoration: none;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #0b1f3a;
+      border: none;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: #f3f7fb;
+      font-size: 16px;
+    }
+
+    .navbar-inverse .navbar-nav > li.active > a,
+    .navbar-inverse .navbar-nav > li.active > a:focus,
+    .navbar-inverse .navbar-nav > li.active > a:hover {
+      background-color: #13345d;
+      color: #ffffff;
+    }
+
+    .page-shell {
+      padding: 44px 0 56px;
+    }
+
+    .page-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      padding: 34px 38px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Oswald', sans-serif;
+      color: #0b1f3a;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .software-item {
+      padding: 22px 24px;
+      border: 1px solid #dde6f0;
+      border-radius: 12px;
+      background: #fbfcfe;
+    }
+
+    .software-item h2 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .software-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e7eef8;
+      color: #34506f;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .software-item p {
+      margin-bottom: 12px;
+    }
+
+    .software-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .software-item li {
+      margin-bottom: 10px;
+    }
+
+    code {
+      display: block;
+      margin-top: 6px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #eef3f8;
+      color: #24384d;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 991px) {
+      .page-shell {
+        padding: 24px 0 36px;
+      }
+
+      .page-card {
+        padding: 24px;
+      }
+
+      .software-item {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-
-<!-- Navigation -->
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-		<ul class="nav navbar-nav">
-               <li><a href="index.html"><b>Home</b></a></li>
-              <li><a href="research.html"><b>Research</b></a></li> 
-              <li><a href="teaching.html"><b>Teaching</b></a></li> 
-	      <li><a href="software.html"><b>Software</b></a></li>
-		</ul>
-	  </div>
-	</nav>
-	
-
-  
-  <!-- Page Content -->
+  <nav class="navbar navbar-inverse">
     <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-9" style="height: 150vh;">
-			
-			
-			   <!-- Contact Info on the Sidebar -->
-                
-                <!-- Main Image -->
-                
-                <div style="margin-top:3%; text-align:justify;"> 
-			 <p> &nbsp </p>
-			<div><b><font size="+1"> RMT4DS (Random matrix tools for data scientists)</font></b><br> <br>
-			 <li> This is an <b> R </b> package containing functions related to general Marchenko–Pastur distribution and Tracy-Widom distribution. We also provide tools for estimation and inference in the general spiked covariance matrix model and signal-plus-noise model.   </li>
-		   <li> It can be either installed from CRAN or Github via <br>
-        <code> library(devtools) <br>
-        devtools::install_github("xcding1212/RMT4DS/RMT4DS") </code> </li>
-			<li> The reference manual can be found on CRAN <a href="https://cran.r-project.org/web/packages/RMT4DS/index.html"> Reference manual for 'RMT4DS'</a> </li>	
-			 <li> A user's guide can be found here <a href="RMT4DS.html">  A user's guide to the R package ‘RMT4DS’  </a> </li>	
-      
-			 
-                        </div>
-			 <p> &nbsp </p>
-			
-				<div><b><font size="+1"> Sie2nts (Sieve method for non-stationary time series)</font></b><br> <br>
-			 <li> This is an <b> R </b> package providing tools for estimation, inference and prediction related to non-stationary time series using Sieve method.   </li>
-		   <li> It can be either installed from CRAN or Github via <br>
-        <code> library(devtools) <br>
-        devtools::install_github("xcding1212/Sie2nts/Sie2nts") </code> </li>	
-					<li> The reference manual can be found on CRAN <a href="https://cran.r-project.org/web/packages/Sie2nts/index.html"> Reference manual for 'Sie2nts'</a> </li>	
-			 <li> A user's guide can be found here <a href="Sie2nts.html">  A user's guide to the R package ‘Sie2nts’  </a> </li>	
-			 <li> The counterpart of a Python package is also available upon request and the jupiter notebook can be found here  <a href="Sievejupiter.html"> Sieve methods in time series </a> </li>		
-                        </div>
-						 <p> &nbsp </p>
-			
-				<div><b><font size="+1"> SIMle (Estimation and simultaneous inference for nonlinear and non-stationary time series regression)</font></b><br> <br>
-			 <li> This is an <b> R </b> package providing functions for estimation and inference of nonlinear and non-stationary time series regression using the sieve methods and bootstrapping procedure.   </li>
-		   <li> It can be either installed from CRAN or Github via <br>
-        <code> library(devtools) <br>
-        devtools::install_github("xcding1212/SIMle/SIMle") </code> </li>
-		<li> The reference manual can be found on CRAN <a href="https://cran.r-project.org/web/packages/SIMle/index.html"> Reference manual for 'SIMle'</a> </li>				
-			 <li> A user's guide can be found here <a href="Checking_SIM.html">  A user's guide to the R package ‘SIMle’  </a> </li>			
-                        </div>
-
- <p> &nbsp </p>
-			
-				<div><b><font size="+1"> UHDtst (Two sample test for covariance matrices in high dimension)</font></b><br> <br>
-			 <li> This is an <b> R </b> package providing functions for testing covariance matrices in high dimension.   </li>
-		   <li> It can be either installed from Github via <br>
-        <code> library(devtools) <br>
-        devtools::install_github("xcding1212/SIMle/SIMle") </code> </li>				
-			 <li> A user's guide can be found here <a href="UHDtst.html">  A user's guide to the R package ‘UHDtst’  </a> </li>			
-                        </div>
-
-			
-                </div>
-            </div> 
-
-         
-            
-            
-            <!-- Links on the Sidebar -->
-            
-            
-           
-            
-        </div>
-
-
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><b>Home</b></a></li>
+        <li><a href="research.html"><b>Research</b></a></li>
+        <li><a href="teaching.html"><b>Teaching</b></a></li>
+        <li class="active"><a href="software.html"><b>Software</b></a></li>
+      </ul>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-  
-    
-</body>
+  </nav>
 
+  <div class="container page-shell">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-card">
+          <div class="software-grid">
+            <section class="software-item">
+              <div class="software-tag">R Package</div>
+              <h2>RMT4DS</h2>
+              <p><strong>Random matrix tools for data scientists.</strong></p>
+              <ul>
+                <li>This package provides functions related to the general Marchenko-Pastur distribution and Tracy-Widom distribution, along with tools for estimation and inference in general spiked covariance matrix and signal-plus-noise models.</li>
+                <li>Install from CRAN or GitHub:
+                  <code>library(devtools)
+devtools::install_github("xcding1212/RMT4DS/RMT4DS")</code>
+                </li>
+                <li><a href="https://cran.r-project.org/web/packages/RMT4DS/index.html">Reference manual for RMT4DS</a></li>
+                <li><a href="RMT4DS.html">User's guide to the R package RMT4DS</a></li>
+              </ul>
+            </section>
+
+            <section class="software-item">
+              <div class="software-tag">R Package</div>
+              <h2>Sie2nts</h2>
+              <p><strong>Sieve methods for non-stationary time series.</strong></p>
+              <ul>
+                <li>This package provides tools for estimation, inference, and prediction for non-stationary time series using sieve methods.</li>
+                <li>Install from CRAN or GitHub:
+                  <code>library(devtools)
+devtools::install_github("xcding1212/Sie2nts/Sie2nts")</code>
+                </li>
+                <li><a href="https://cran.r-project.org/web/packages/Sie2nts/index.html">Reference manual for Sie2nts</a></li>
+                <li><a href="Sie2nts.html">User's guide to the R package Sie2nts</a></li>
+                <li>A Python counterpart is available upon request. A related notebook is available here: <a href="Sievejupiter.html">Sieve methods in time series</a>.</li>
+              </ul>
+            </section>
+
+            <section class="software-item">
+              <div class="software-tag">R Package</div>
+              <h2>SIMle</h2>
+              <p><strong>Estimation and simultaneous inference for nonlinear and non-stationary time series regression.</strong></p>
+              <ul>
+                <li>This package provides functions for estimation and inference in nonlinear and non-stationary time series regression using sieve methods and bootstrap procedures.</li>
+                <li>Install from CRAN or GitHub:
+                  <code>library(devtools)
+devtools::install_github("xcding1212/SIMle/SIMle")</code>
+                </li>
+                <li><a href="https://cran.r-project.org/web/packages/SIMle/index.html">Reference manual for SIMle</a></li>
+                <li><a href="Checking_SIM.html">User's guide to the R package SIMle</a></li>
+              </ul>
+            </section>
+
+            <section class="software-item">
+              <div class="software-tag">R Package</div>
+              <h2>UHDtst</h2>
+              <p><strong>Two-sample testing for covariance matrices in high dimension.</strong></p>
+              <ul>
+                <li>This package provides functions for testing covariance matrices in high dimensions.</li>
+                <li>Install from GitHub:
+                  <code>library(devtools)
+devtools::install_github("xcding1212/UHDtst/UHDtst")</code>
+                </li>
+                <li><a href="UHDtst.html">User's guide to the R package UHDtst</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
