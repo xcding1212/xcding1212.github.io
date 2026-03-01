@@ -91,6 +91,24 @@
     }
 
     @media (max-width: 991px) {
+      .navbar-nav {
+        float: none;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .navbar-nav > li {
+        float: none;
+      }
+
+      .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
       .page-shell {
         padding: 24px 0 36px;
       }
